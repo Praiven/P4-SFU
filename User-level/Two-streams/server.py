@@ -11,7 +11,7 @@ from scapy.all import (
 )
 
 def handle_pkt(pkt):
-    if UDP in pkt and pkt[IP].dst == '10.0.0.9' and (pkt[UDP].dport == 6363 or pkt[UDP].dport == 6364):
+    if UDP in pkt and pkt[IP].dst == '10.0.0.17' and (pkt[UDP].dport == 6363 or pkt[UDP].dport == 6364):
         print("got a packet")
         print(pkt.time)
         pkt.show2()
